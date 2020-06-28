@@ -3,7 +3,7 @@
  */
 const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
 
-const bidDetails = {
+/*const bidDetails = {
   // retrieve the existing Admin Bid details entries
   get() {
     return $.ajax({
@@ -13,7 +13,7 @@ const bidDetails = {
     });
   },
   const signup={};
-  console.log("signup");
+  console.log("signup");*/
   // add a single bid detail entry
   /*add(bidName,bidId,bidRegion,bidAmount) {
     
@@ -95,7 +95,7 @@ const bidDetails = {
       console.log(error);
     });
   });*/
-  $(document).on('submit', '#signUp', function(e) {
+  /*$(document).on('submit', '#signUp', function(e) {
     e.preventDefault();
 
     signup.add(
@@ -108,7 +108,7 @@ const bidDetails = {
     }).error(function(error) {
       console.log(error);
     });
-  });
+  });*/
   
   
 
