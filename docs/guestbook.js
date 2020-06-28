@@ -47,7 +47,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
   }
 };
 //NGO Initiated Bid entry in table
-/*
+
 const ngoInitiateBid={
   add(bidId,costPerTree,name) {
     
@@ -64,10 +64,10 @@ const ngoInitiateBid={
     });
   }
 };
-console.log("ngoInitiateBid");
-*/
+//console.log("ngoInitiateBid");
+
 (function() {
-  /* Alok
+  
   let entriesTemplate;
 
   function prepareTemplates() {
@@ -92,27 +92,11 @@ console.log("ngoInitiateBid");
       console.log(error);
     });
   }
-  */ //Alok End
+ 
 
   // intercept the click on the submit button, add the bidDetails entry and
   // reload entries on success
-  /*$(document).on('submit', '#signUp', function(e) {
-    e.preventDefault();
-
-    bidDetails.add(
-      $('#name').val().trim(),      
-      $('#password').val().trim()
-	  $('#bidName').val().trim(),
-	  $('#bidId').val().trim(),
-	  $('#bidRegion').val().trim(),
-	  $('#bidAmount').val().trim()
-    ).done(function(result) {
-      // reload entries
-      loadEntries();
-    }).error(function(error) {
-      console.log(error);
-    });
-  });*/
+ 
   //Sign Up
   $(document).on('submit', '#signUp', function(e) {
     e.preventDefault();
@@ -123,14 +107,14 @@ console.log("ngoInitiateBid");
 	  $('#email').val().trim()
     ).done(function(result) {
       // reload entries
-      //loadEntries();
+      loadEntries();
     }).error(function(error) {
       console.log(error);
     });
   });
   
   //NGO Specific BID entry
-  /*
+  
   $(document).on('submit', '#initiateBid', function(e) {
     e.preventDefault();
 
@@ -140,16 +124,16 @@ console.log("ngoInitiateBid");
 	  $('#name').val().trim()
     ).done(function(result) {
       // reload entries
-      //loadEntries();
+      loadEntries();
     }).error(function(error) {
       console.log(error);
     });
   });
-  */
   
-  /*
+  
+  
   $(document).ready(function() { 
     prepareTemplates();
-    //loadEntries();
-  }); */ //Alok
+    loadEntries();
+  });
 })();
