@@ -53,7 +53,7 @@ const ngoInitiateBid={
     
     return $.ajax({
       type: 'PUT',
-      url: `${apiUrl}/ngosignup`,
+      url: `${apiUrl}/ngospecificbidentry`,
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({
         bidId,
