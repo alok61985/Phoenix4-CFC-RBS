@@ -1,35 +1,57 @@
 /**
  * Web application
  */
-const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/guestbook';
-const guestbook = {
-  // retrieve the existing guestbook entries
+const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
+
+const bidDetails = {
+  // retrieve the existing Admin Bid details entries
   get() {
     return $.ajax({
       type: 'GET',
-      url: `${apiUrl}/entries`,
+      url: `${apiUrl}/adminbiddetailsread`,
       dataType: 'json'
     });
   },
-  // add a single guestbood entry
-  add(name,password) {
-    console.log('Sending', name,password)
+  const signup={};
+  console.log("signup");
+  // add a single bid detail entry
+  /*add(bidName,bidId,bidRegion,bidAmount) {
+    
     return $.ajax({
       type: 'PUT',
-      url: `${apiUrl}/entries`,
+      url: `${apiUrl}/adminbidentry`,
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({
-        name,        
-        password,
+        bidName,
+		bidId,
+		bidRegion,
+		bidAmount,
+      }),
+      dataType: 'json',
+    });
+  }*/
+  
+  add(name,password,email) {
+    
+    return $.ajax({
+      type: 'PUT',
+      url: `${apiUrl}/ngosignup`,
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify({
+        name,
+		password,
+		email,		
       }),
       dataType: 'json',
     });
   }
+  
+  
 };
 
 (function() {
 
-  let entriesTemplate; 
+  let entriesTemplate;
 
   function prepareTemplates() {
     entriesTemplate = Handlebars.compile($('#entries-template').html());
@@ -39,7 +61,7 @@ const guestbook = {
   function loadEntries() {
     console.log('Loading entries...');
     $('#entries').html('Loading entries...');
-    guestbook.get().done(function(result) {
+    bidDetails.get().done(function(result) {
       if (!result.entries) {
         return;
       }
@@ -54,14 +76,32 @@ const guestbook = {
     });
   }
 
-  // intercept the click on the submit button, add the guestbook entry and
+  // intercept the click on the submit button, add the bidDetails entry and
   // reload entries on success
-  $(document).on('submit', '#addEntry', function(e) {
+  /*$(document).on('submit', '#signUp', function(e) {
     e.preventDefault();
 
-    guestbook.add(
+    bidDetails.add(
       $('#name').val().trim(),      
       $('#password').val().trim()
+	  $('#bidName').val().trim(),
+	  $('#bidId').val().trim(),
+	  $('#bidRegion').val().trim(),
+	  $('#bidAmount').val().trim()
+    ).done(function(result) {
+      // reload entries
+      loadEntries();
+    }).error(function(error) {
+      console.log(error);
+    });
+  });*/
+  $(document).on('submit', '#signUp', function(e) {
+    e.preventDefault();
+
+    signup.add(
+      $('#name').val().trim(),      
+      $('#password').val().trim(),	 
+	  $('#email').val().trim()
     ).done(function(result) {
       // reload entries
       loadEntries();
@@ -69,6 +109,8 @@ const guestbook = {
       console.log(error);
     });
   });
+  
+  
 
   $(document).ready(function() {
     prepareTemplates();
