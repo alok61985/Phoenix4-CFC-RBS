@@ -49,6 +49,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
 
 (function() {
   
+  /*Alok
   let entriesTemplate;
 
   function prepareTemplates() {
@@ -73,7 +74,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
       console.log(error);
     });
   }
- 
+ *///Alok
 
   // intercept the click on the submit button, add the bidDetails entry and
   // reload entries on success
@@ -88,7 +89,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
 	  $('#email').val().trim()
     ).done(function(result) {
       // reload entries
-      loadEntries();
+      //loadEntries();
     }).error(function(error) {
       console.log(error);
     });
@@ -97,9 +98,9 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
  
   
   
-  
+  /*Alok
   $(document).ready(function() { 
     prepareTemplates();
     loadEntries();
-  });
+  }); *///Alok
 })();
