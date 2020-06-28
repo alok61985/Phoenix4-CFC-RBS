@@ -95,7 +95,13 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
     });
   });
   
- 
+  //ALok ..TO Do
+  //Sign In..Do Nothing
+  $(document).on('submit', '#signIn', function(e) {
+    e.preventDefault();
+	//Do Nothing    
+  }); 
+  //ALok ..TO Do End
   
   
   /*Alok
