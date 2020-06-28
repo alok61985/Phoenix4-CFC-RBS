@@ -149,7 +149,7 @@ span.psw {
       <label for="password"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" id="password" required>
         
-      <button id ="demo1" type="submit">Sign In</button>
+      <button id ="signInButton" type="submit">Sign In</button>
       
     </div>
 
@@ -173,8 +173,11 @@ span.psw {
 
       <label for="password"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" id="password" required>
-        
-      <button id ="demo1" type="submit">Sign Up</button>
+         
+	  <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+	
+      <button id ="signUpButton" type="submit">Sign Up</button>
       
     </div>
 
@@ -186,7 +189,7 @@ span.psw {
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
-var modal2 = document.getElementById('id01');
+var modal2 = document.getElementById('id03');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -202,7 +205,14 @@ window.onclick = function(event) {
 }
 </script>
   <script type = "text/javascript">
-    document.getElementById("demo1").onclick=function(){
+    document.getElementById("signUpButton").onclick=function(){
+      //location.href="Redirect1.html";
+      location.href="initiateBid.html";
+    };
+  </script>
+  
+  <script type = "text/javascript">
+    document.getElementById("signInButton").onclick=function(){
       //location.href="Redirect1.html";
       location.href="initiateBid.html";
     };
