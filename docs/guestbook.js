@@ -111,7 +111,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
   
   
 
-  $(document).ready(function() {
+  $(document).ready(function() { 
     prepareTemplates();
     loadEntries();
   });
