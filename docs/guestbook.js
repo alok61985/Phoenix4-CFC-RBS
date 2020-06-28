@@ -29,7 +29,7 @@ const guestbook = {
 
 (function() {
 
-  let entriesTemplate;
+  let entriesTemplate; 
 
   function prepareTemplates() {
     entriesTemplate = Handlebars.compile($('#entries-template').html());
