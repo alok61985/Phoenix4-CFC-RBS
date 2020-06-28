@@ -47,7 +47,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
   }
 };
 //NGO Initiated Bid entry in table
-
+/*
 const ngoInitiateBid={
   add(bidId,costPerTree,name) {
     
@@ -64,6 +64,8 @@ const ngoInitiateBid={
     });
   }
 };
+console.log("ngoInitiateBid");
+*/
 (function() {
 
   let entriesTemplate;
@@ -127,6 +129,7 @@ const ngoInitiateBid={
   });
   
   //NGO Specific BID entry
+  /*
   $(document).on('submit', '#initiateBid', function(e) {
     e.preventDefault();
 
@@ -141,7 +144,7 @@ const ngoInitiateBid={
       console.log(error);
     });
   });
-  
+  */
   
 
   $(document).ready(function() { 
