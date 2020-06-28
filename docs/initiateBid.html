@@ -38,7 +38,7 @@ td, th {
 	top: 2px;
 	left: 2px;
 	width: calc(100% - 4px);
-	height: 50%;
+	height: 40%;
 	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
 }
 
@@ -53,48 +53,62 @@ tr:nth-child(even) {
 
 	
 
-<h2 style ="font-family:calibri;color:red;background-color:White">Create Proposal</h2>
-
+<h2 style ="font-family:calibri;color:red;background-color:White">Initiate your BID</h2>
+<form id="initiateBid">
 <table>
   <tr style ="font-family:calibri;color:black;border:2px solid blue;background-color:lightblue">
     <th style="border:2px solid blue;">BID Name</th>
     <th style="border:2px solid blue;">BID ID</th>
     <th style="border:2px solid blue;">BID Region</th>
-    <th style="border:2px solid blue;">EST Plant Count</th>
-    <th style="border:2px solid blue;">Click to BID</th>
+	<th style="border:2px solid blue;">BID Amount</th>     
+	
   </tr>
   <tr>
     <td>Alfreds Futterkiste</td>
     <td>111</td>
     <td>Delhi</td>
-    <td><input type="text" placeholder="" name="uname" required></td>
-    <td><button type="submit" class="btn"><b>Bid</b></button></td>
+    <td>50000</td>
+    
   </tr>
   <tr>
     <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
+    <td>222</td>
     <td>Mumbai</td>
-    <td><input type="text" placeholder="" name="uname" required></td>
-    <td><button type="submit" class="btn"><b>Bid</b></button></td>
+    <td>20000</td>
+    
   </tr>
   <tr>
     <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
+    <td>333</td>
     <td>Chennai</td>
-    <td><input type="text" placeholder="" name="uname" required></td>
-    <td><button type="submit" class="btn"><b>Bid</b></button></td>
+    <td>30000</td>
+    
   </tr>
   <tr>
     <td>Island Trading</td>
-    <td>Helen Bennett</td>
+    <td>444</td>
     <td>Bangalore</td>
-    <td><input type="text" placeholder="" name="uname" required></td>
-    <td><button type="submit" class="btn"><b>Bid</b></button></td>
-  </tr>
-  
+    <td>40000</td>
+    
+  </tr> 
 
-  
 </table>
+<br>
+Enter the Bid Id :                   <input type="text" placeholder="" name="bidId" id="bidId" required><br><br><br>
+Enter your NGO Name :                <input type="text" placeholder="" name="name" id="name" required><br><br><br>
+Enter your estimated cost per tree : <input type="text" placeholder="" name="costPerTree" id="costPerTree" required><br><br><br>
+<button id ="bidButton" type="submit" class="btn">Place Your Bid</button>
+
+</form>
+<script type = "text/javascript">
+    document.getElementById("bidButton").onclick=function(){
+      location.href="Redirect1.html";
+      //location.href="initiateBid.html";
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="guestbook.js"></script>
 </body>
 </html>
 
