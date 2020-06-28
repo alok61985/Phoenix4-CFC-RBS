@@ -44,8 +44,7 @@ const apiUrl = 'https://04ff9d6e.eu-gb.apigw.appdomain.cloud/phoenix4ngoapp';
       }),
       dataType: 'json',
     });
-  }
-  
+   
   
 };
 
