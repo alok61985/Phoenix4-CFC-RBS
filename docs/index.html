@@ -127,9 +127,10 @@ span.psw {
 </head>
 <body>
 
-<h2>Modal Login Form</h2>
+<h2>Bid Login Form</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign In</button>
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Sign Up</button>
 
 <div id="id01" class="modal">
 
@@ -146,7 +147,7 @@ span.psw {
       <label for="password"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" id="password" required>
         
-      <button id ="demo1" type="submit">Login</button>
+      <button id ="demo1" type="submit">Sign In</button>
       
     </div>
 
@@ -156,9 +157,34 @@ span.psw {
   </form>
 </div>
 
+<div id="id03" class="modal">
+
+<form id="addEntry" class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" id="name" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" id="password" required>
+        
+      <button id ="demo1" type="submit">Sign Up</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
+var modal2 = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -166,11 +192,17 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+// When the user clicks anywhere outside of the modal2, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
 </script>
   <script type = "text/javascript">
     document.getElementById("demo1").onclick=function(){
-      location.href="Redirect1.html";
-      
+      //location.href="Redirect1.html";
+      location.href="initiateBid.html";
     };
   </script>
   
