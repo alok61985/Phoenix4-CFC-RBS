@@ -67,7 +67,7 @@ const ngoInitiateBid={
 console.log("ngoInitiateBid");
 */
 (function() {
-
+  /* Alok
   let entriesTemplate;
 
   function prepareTemplates() {
@@ -92,6 +92,7 @@ console.log("ngoInitiateBid");
       console.log(error);
     });
   }
+  */ //Alok End
 
   // intercept the click on the submit button, add the bidDetails entry and
   // reload entries on success
@@ -122,7 +123,7 @@ console.log("ngoInitiateBid");
 	  $('#email').val().trim()
     ).done(function(result) {
       // reload entries
-      loadEntries();
+      //loadEntries();
     }).error(function(error) {
       console.log(error);
     });
@@ -139,16 +140,16 @@ console.log("ngoInitiateBid");
 	  $('#name').val().trim()
     ).done(function(result) {
       // reload entries
-      loadEntries();
+      //loadEntries();
     }).error(function(error) {
       console.log(error);
     });
   });
   */
   
-
+  /*
   $(document).ready(function() { 
     prepareTemplates();
-    loadEntries();
-  });
+    //loadEntries();
+  }); */ //Alok
 })();
